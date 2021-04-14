@@ -3,6 +3,7 @@ import Imagegrid from './comps/Imagegrid';
 import Modal from './comps/Modal';
 import Title from './comps/Title';
 import UploadForm from './comps/UploadForm';
+import SignIn from './comps/SignIn'
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import {auth} from "./firebase/config"
@@ -11,8 +12,9 @@ import firebase from "./firebase/config"
 const sighInWithGoogle = () => auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 
 const Signinsignout = () => (
-  <div>
+  <div  style={{textAlign:'center'}} >
   <button onClick={sighInWithGoogle}>Sign In With Google</button>
+  <SignIn />
   </div>
 )
 
