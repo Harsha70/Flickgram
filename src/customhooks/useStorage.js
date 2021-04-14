@@ -28,7 +28,7 @@ const useStorage = (file, auth) => {
             await collectionRef.add({uploadedby:user.displayName, url, createdAt, likes:[]});
             seturl(url);
           })
-    }, [file])
+    }, [file, user.displayName])
 
     return { progress, url, error };
 }

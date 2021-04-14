@@ -4,7 +4,6 @@ import useFirestore from "../customhooks/useFirestore"
 import { projectFirestore } from '../firebase/config';
 import {auth} from "../firebase/config"
 import firebase from "../firebase/config"
-import {useState} from "react"
 
 const Imagegrid = ({setselectedimg}) => {
     const {docs} = useFirestore('images')
